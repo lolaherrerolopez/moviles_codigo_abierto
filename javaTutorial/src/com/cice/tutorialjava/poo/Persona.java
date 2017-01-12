@@ -48,7 +48,7 @@ public class Persona {
 		setEdad(edad);
 	}
 	
-	void print(){
+	public void print(){
 		System.out.println("Nombre ["+ this.nombre + "] Edad [" + this.edad + "] Domicilio [" + this.domicilio + "]");
 	}
 }

@@ -44,5 +44,28 @@ public class Racional implements Comparable{
 		buffer.append(Math.abs(numerador) + "/" + Math.abs(denominador));
 		return buffer.toString();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean resultado=false;
+		// TODO Auto-generated method stub
+		if (!(obj instanceof Racional))
+			return false;
+		Racional r=(Racional)obj;
+		if (numerador*r.getDenominador() == r.getNumerador()*denominador){
+			resultado= true;
+		}
+		return resultado;
+	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		int result=17;
+		result =31 *result + numerador; //8bits>>32-bit
+		result = 31* result + denominador;//16bits>> 32-bit
+		return result;
+	}
 
+	
 }

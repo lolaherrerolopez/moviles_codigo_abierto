@@ -63,7 +63,7 @@ public class Estudiante extends Persona{
 			}
     	}
 	}
-    void print(){
+    public void print(){
 		System.out.println("Alumno ["+ this.getNombre() + "] Edad [" + this.getEdad() + "] NIE ["+ this.getNie() + "] numero cursos: " + this.getCursos().length + "]" );
 		System.out.println("	Cursos:");
 		for ( String curso:this.cursos){
